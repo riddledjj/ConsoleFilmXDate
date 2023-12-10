@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  pg:
+    #    build: ./pg
+    image: postgres:14
+    container_name: movie_catolog
+    hostname: mch
+    restart: always
+    environment:
+      POSTGRES_USER:
+      POSTGRES_PASSWORD: 123
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./postgres/pg_volume:/var/lib/postgresql/data
+
+
+
+volumes:
+  pg_volume:
+    driver: local
+    external: false

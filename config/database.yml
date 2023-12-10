@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: movie_catalog
+  pool: 5
+  username: vadym
+  password: password
+  host: localhost
+  port: 5432
